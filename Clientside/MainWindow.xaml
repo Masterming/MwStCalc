@@ -1,0 +1,34 @@
+﻿<Window x:Class="Clientside.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clientside"
+        mc:Ignorable="d"
+        Title="Mehrwertsteuer" Height="400" Width="400">
+    <Border Padding="10">
+        <StackPanel>
+            <TextBlock Text="Berechnung:" FontWeight="Bold" Margin="0 0 0 0" />
+            <RadioButton x:Name="netto" Click="Radio_Click" Content="Netto zu Brutto" IsChecked="True"/>
+            <RadioButton Content="Brutto zu Netto" Click="Radio_Click"/>
+
+            <TextBlock Text="Steuersatz:" FontWeight="Bold" Margin="0 10 0 0" />
+            <RadioButton x:Name="r19" GroupName="perc" Content="19 %" IsChecked="True"/>
+            <RadioButton x:Name="r16" GroupName="perc" Content="16 % (bis 31.12.20)"/>
+            <RadioButton x:Name="r7" GroupName="perc" Content="7 %"/>
+            <RadioButton x:Name="r5" GroupName="perc" Content="5 % (bis 31.12.20)"/>
+            <TextBlock Text="Der reduzierte Satz von 7/5% gilt nur bei wenigen Waren." FontWeight="Light" FontSize="8" />
+
+            <TextBlock x:Name="start" Text="Nettobetrag (ohne MwSt.):" FontWeight="Bold" Margin="0 10 0 0" />
+            <TextBox x:Name="amm" Text="100,00" Width="400" Margin="0 0 0 10"/>
+            <Button x:Name="button" Click="Button_Click" Content="Berechnen"></Button>
+
+
+            <TextBlock Text="Mehrwertsteuer:" FontWeight="Bold" Margin="0 10 0 0" />
+            <TextBox x:Name="steuer" Text="" Width="400" IsReadOnly="True" Background="#eee"/>
+            <TextBlock Text="Endbetrag:" FontWeight="Bold" Margin="0 10 0 0" />
+            <TextBox x:Name="betrag" Text="" Width="400" IsReadOnly="True" Background="#eee"/>
+
+        </StackPanel>
+    </Border>
+</Window>
