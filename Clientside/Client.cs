@@ -1,5 +1,6 @@
-﻿using Services;
+﻿using System;
 using System.ServiceModel;
+using Services;
 
 namespace Clientside
 {
@@ -42,7 +43,7 @@ namespace Clientside
             }
             finally
             {
-            factory.Close();
+                factory.Close();
             }
             return res;
         }
