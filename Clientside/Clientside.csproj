@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EACAB0ED-34DF-40AC-AB76-56E3CE4D5F09}</ProjectGuid>
+    <ProjectGuid>{E3B2D6C2-A5B7-4C80-BACE-9819F3733255}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Clientside</RootNamespace>
     <AssemblyName>Clientside</AssemblyName>
@@ -14,8 +14,6 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -92,7 +90,6 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -104,7 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Services\Services.csproj">
-      <Project>{ac8727cf-1567-4bba-aedf-b101549f6557}</Project>
+      <Project>{ae9bb0fc-1d9d-4a49-a7da-3f11c8ba0832}</Project>
       <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>

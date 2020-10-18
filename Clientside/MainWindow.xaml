@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Clientside"
         mc:Ignorable="d"
         Title="Mehrwertsteuer" Height="400" Width="400">
+    
     <Border Padding="10">
         <StackPanel>
             <TextBlock Text="Berechnung:" FontWeight="Bold" Margin="0 0 0 0" />

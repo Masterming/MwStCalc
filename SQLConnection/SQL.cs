@@ -1,5 +1,6 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using System;
 using System.IO;
+using Microsoft.Data.Sqlite;
 
 namespace SQLConnection
 {
@@ -12,10 +13,14 @@ namespace SQLConnection
             source = $"..\\..\\{source}";
             destination = $"..\\..\\{destination}";
 
+            bool tmp = false;
+            if (!File.Exists(destination))
+                tmp = true;
+
             db = new SqliteConnection("Data Source=" + destination);
             db.Open();
 
-            if (!File.Exists(destination))
+            if(tmp)
                 InitializeDatabase(source);
         }
 
